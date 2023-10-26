@@ -23,16 +23,19 @@ servers:
   - url: https://asia-southeast2-testlogin-366704.cloudfunctions.net/fixxlastppost
   - url: https://us-central1-testlogin-366704.cloudfunctions.net/allprod
 tags:
+  - externalDocs:
+      description: Deskripsi dan Kode Program
   - name: Get All User
     description: Get all user
-    externalDocs:
-      description: Deskripsi dan Kode Program
+    
   - name: user
     description: Auth to Access to API
     externalDocs:
       description: Deskripsi dan Kode Program
   - name: Gis Location
     description: Get Gis Location
+    externalDocs:
+      description: Deskripsi dan Kode Program
 paths:
   /getallUser:
     get:
