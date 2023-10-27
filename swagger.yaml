@@ -81,8 +81,7 @@ paths:
       security:
         - token:
             - write: apiKey
-            - read:apiKey
-paths:
+            - read: apiKey
   /Gis:
     get:
       tags:
