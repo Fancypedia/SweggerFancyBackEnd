@@ -16,6 +16,7 @@ externalDocs:
   description: Repo GCF
   url: https://pkg.go.dev/github.com/Fancypedia/fancybackenddd
 servers:
+<<<<<<< HEAD
   - url: https://asia-southeast2-testlogin-366704.cloudfunctions.net
 tags:
   - name: Create GIS
@@ -30,6 +31,16 @@ tags:
       url: https://pkg.go.dev/github.com/Fancypedia/fancybackenddd
   - name: user
     description: Get Token and Authorize
+=======
+  - url: https://asia-southeast2-testlogin-366704.cloudfunctions.net/getaaalll
+  - url: https://asia-southeast2-testlogin-366704.cloudfunctions.net/function-16
+  - url: https://asia-southeast2-testlogin-366704.cloudfunctions.net/gislocation
+  - url: https://us-central1-testlogin-366704.cloudfunctions.net/delete
+  - url: https://asia-southeast2-testlogin-366704.cloudfunctions.net/updated
+  - url: https://asia-southeast2-testlogin-366704.cloudfunctions.net/function-2ss
+  - url: https://asia-southeast2-testlogin-366704.cloudfunctions.net/fixxlastppost
+  - url: https://us-central1-testlogin-366704.cloudfunctions.net/allprod
+>>>>>>> 84cf55747868266dfea3f73e267b53aafc81b060
 paths:
   /gislocation:
     get:
@@ -49,7 +60,12 @@ paths:
                   $ref: '#/components/schemas/Peta'
         '400':
           description: Invalid status value
+<<<<<<< HEAD
   /function-16:
+=======
+
+  /Login:
+>>>>>>> 84cf55747868266dfea3f73e267b53aafc81b060
     post:
       tags:
         - auth
