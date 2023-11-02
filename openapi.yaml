@@ -55,9 +55,9 @@ paths:
     get:
       tags:
         - data
-      summary: Get Data Geospasial
-      description: List Data Geospasial
-      operationId: getGeoJSON
+      summary: Get Data Content
+      description: List Data Content
+      operationId: GetContent
       responses:
         '200':
           description: successful operation
