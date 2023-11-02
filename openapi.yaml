@@ -49,6 +49,24 @@ paths:
                   $ref: '#/components/schemas/Peta'
         '400':
           description: Invalid status value
+  /bismillahcontentall:
+    get:
+      tags:
+        - data
+      summary: Get Data Geospasial
+      description: List Data Geospasial
+      operationId: getGeoJSON
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Peta'
+        '400':
+          description: Invalid status value
   /function-16:
     post:
       tags:
