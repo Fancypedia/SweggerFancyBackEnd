@@ -228,9 +228,9 @@ paths:
     post:
       tags:
         - user
-      summary: Create content Data
-      description: Add new content data
-      operationId: create content
+      summary: Create Product Data
+      description: Add new Product data
+      operationId: create Product
       requestBody:
         required: true
         content:
