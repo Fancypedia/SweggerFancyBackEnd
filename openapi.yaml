@@ -241,6 +241,24 @@ paths:
         '201':
           description: Data successfully created
         '400':
+          description: Invalid input or request body
+  /fixxlastppost:
+    post:
+      tags:
+        - product
+      summary: Create content Data
+      description: Add new content data
+      operationId: create content
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Auth' # Gunakan skema yang sesuai di sini
+      responses:
+        '201':
+          description: Data successfully created
+        '400':
           description: Invalid input or request body         
 components:
   schemas:
