@@ -207,6 +207,26 @@ paths:
         '400':
           description: Invalid input or request body
       security:
+        - token: []
+  /deletecommentfix:
+    delete:
+      tags:
+        - comment
+      summary: Delete comment by id
+      description: Delete comment id
+      operationId: delete comment
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DeleteCommentBYid' # Gunakan skema yang sesuai di sini
+      responses:
+        '201':
+          description: Data successfully created
+        '400':
+          description: Invalid input or request body
+      security:
         - token: []           
 components:
   schemas:
@@ -269,6 +289,12 @@ components:
         Tanggal:
           type: string
           example: "23-09-32"
+    DeleteCommentBYid:
+      type: object
+      properties:
+        id:
+          type: int
+          example: 123
   requestBodies:
     AuthReq:
       description: Request Authentication
