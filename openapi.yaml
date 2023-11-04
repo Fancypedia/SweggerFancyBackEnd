@@ -167,6 +167,26 @@ paths:
         '400':
           description: Invalid input or request body
       security:
+        - token: []
+  /crreatecommnet1-1:  # Penambahan endpoint Create GIS
+    post:
+      tags:
+        - comment
+      summary: Create comment Data
+      description: Add new comment data
+      operationId: create comment
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Peta' # Gunakan skema yang sesuai di sini
+      responses:
+        '201':
+          description: Data successfully created
+        '400':
+          description: Invalid input or request body
+      security:
         - token: []           
 components:
   schemas:
