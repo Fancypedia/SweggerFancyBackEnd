@@ -187,6 +187,26 @@ paths:
         '400':
           description: Invalid input or request body
       security:
+        - token: []
+  /updatedcommnet:
+    patch:
+      tags:
+        - comment
+      summary: Update comment by id
+      description: Update comment id
+      operationId: update comment
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateComment' # Gunakan skema yang sesuai di sini
+      responses:
+        '201':
+          description: Data successfully created
+        '400':
+          description: Invalid input or request body
+      security:
         - token: []           
 components:
   schemas:
