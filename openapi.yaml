@@ -185,7 +185,7 @@ paths:
   /createproduct:
     post:
       tags:
-        - product
+        - Product
       summary: Create content Data
       description: Add new content data
       operationId: create content
@@ -201,7 +201,27 @@ paths:
         '400':
           description: Invalid input or request body
       security:
-        - token: []         
+        - token: []
+  /updateproduct:
+    patch:
+      tags:
+        - Product
+      summary: Updated Product Data berdasarkan nomor id
+      description: Updated Product data
+      operationId: Updated Product
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/product' # Gunakan skema yang sesuai di sini
+      responses:
+        '201':
+          description: Data successfully created
+        '400':
+          description: Invalid input or request body
+      security:
+        - token: []               
 components:
   schemas:
     Peta:
