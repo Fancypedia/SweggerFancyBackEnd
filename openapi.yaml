@@ -186,9 +186,9 @@ paths:
     post:
       tags:
         - Product
-      summary: Create content Data
-      description: Add new content data
-      operationId: create content
+      summary: Create Product Data
+      description: Add new Product data
+      operationId: create Product
       requestBody:
         required: true
         content:
@@ -221,7 +221,27 @@ paths:
         '400':
           description: Invalid input or request body
       security:
-        - token: []               
+        - token: []
+  /deleteproductt:
+    delete:
+      tags:
+        - Product
+      summary: delete Product Data berdasarkan nomor id
+      description: delete Product data
+      operationId: delete Product
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DeleteProduct' # Gunakan skema yang sesuai di sini
+      responses:
+        '201':
+          description: Data successfully created
+        '400':
+          description: Invalid input or request body
+      security:
+        - token: []                
 components:
   schemas:
     Peta:
@@ -310,10 +330,10 @@ components:
         Status:
           type: string
           example: false || true
-    DeleteCommentBYid:
+    DeleteProduct:
       type: object
       properties:
-        id:
+        nomorid:
           type: int
           example: 123
   requestBodies:
