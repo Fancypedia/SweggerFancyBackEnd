@@ -36,7 +36,7 @@ paths:
   /gislocation:
     get:
       tags:
-        - data
+        - Data Grafik 
       summary: Get Data Geospasial
       description: List Data Geospasial
       operationId: getGeoJSON
@@ -54,7 +54,7 @@ paths:
   /bismillahcontentall:
     get:
       tags:
-        - data
+        - Data Grafik 
       summary: Get Data Content
       description: List Data Content
       operationId: GetContent
@@ -72,7 +72,7 @@ paths:
   /allprod:
     get:
       tags:
-        - data
+        - Data Grafik 
       summary: Get Data product
       description: List Data product
       operationId: GetProduct
@@ -90,7 +90,7 @@ paths:
   /getAlluser:
     get:
       tags:
-        - data
+        - Data Grafik 
       summary: Get Data user
       description: List Data user
       operationId: getUser
@@ -108,7 +108,7 @@ paths:
   /getAllcommned:
     get:
       tags:
-        - data
+        - Data Grafik
       summary: Get Data Geospasial
       description: List Data Geospasial
       operationId: getGeoJSON
