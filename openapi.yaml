@@ -224,7 +224,7 @@ paths:
           description: Invalid input or request body
       security:
         - token: []
-  /createcontent-7:
+  /login:
     post:
       tags:
         - user
