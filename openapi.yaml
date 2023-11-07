@@ -242,7 +242,7 @@ paths:
           description: Data successfully created
         '400':
           description: Invalid input or request body
-  /fixxlastppost:
+  /createproduct:
     post:
       tags:
         - product
