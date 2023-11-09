@@ -51,60 +51,6 @@ paths:
                   $ref: '#/components/schemas/Peta'
         '400':
           description: Invalid status value
-  /bismillahcontentall:
-    get:
-      tags:
-        - Data Grafik 
-      summary: Get Data Content
-      description: List Data Content
-      operationId: GetContent
-      responses:
-        '200':
-          description: successful operation
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Peta'
-        '400':
-          description: Invalid status value
-  /allprod:
-    get:
-      tags:
-        - Data Grafik 
-      summary: Get Data product
-      description: List Data product
-      operationId: GetProduct
-      responses:
-        '200':
-          description: successful operation
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Peta'
-        '400':
-          description: Invalid status value
-  /getAlluser:
-    get:
-      tags:
-        - Data Grafik 
-      summary: Get Data user
-      description: List Data user
-      operationId: getUser
-      responses:
-        '200':
-          description: successful operation
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Peta'
-        '400':
-          description: Invalid status value
   /getAllcommned:
     get:
       tags:
