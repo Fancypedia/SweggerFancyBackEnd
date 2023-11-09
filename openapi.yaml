@@ -252,7 +252,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/product' # Gunakan skema yang sesuai di sini
+              $ref: '#/components/schemas/content' # Gunakan skema yang sesuai di sini
       responses:
         '201':
           description: Data successfully created
@@ -354,6 +354,24 @@ components:
         nomorid:
           type: int
           example: 123
+    content:
+      type: object
+      properties:
+        id:
+          type: int
+          example: 123
+        Content:
+          type: string
+          example: udin123
+        Image:
+          type: string
+          example: kamu knp?
+        Descriptopn:
+          type: int
+          example: 123
+        Status:
+          type: bool
+          example: true
   requestBodies:
     AuthReq:
       description: Request Authentication
