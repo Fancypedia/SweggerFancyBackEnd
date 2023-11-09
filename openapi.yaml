@@ -53,9 +53,9 @@ paths:
     get:
       tags:
         - Data Grafik
-      summary: Get Data Geospasial
-      description: List Data Geospasial
-      operationId: getGeoJSON
+      summary: Get Data comment
+      description: List Data comment
+      operationId: Getcomment
       responses:
         '200':
           description: successful operation
@@ -71,9 +71,9 @@ paths:
     get:
       tags:
         - Data Grafik
-      summary: Get Data Geospasial
-      description: List Data Geospasial
-      operationId: getGeoJSON
+      summary: Get Data Product
+      description: List Data Product
+      operationId: getProduct
       responses:
         '200':
           description: successful operation
@@ -89,9 +89,9 @@ paths:
     get:
       tags:
         - Data Grafik
-      summary: Get Data Geospasial
-      description: List Data Geospasial
-      operationId: getGeoJSON
+      summary: Get Data Content
+      description: List Data Content
+      operationId: getContent
       responses:
         '200':
           description: successful operation
