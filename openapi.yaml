@@ -159,7 +159,7 @@ paths:
               $ref: '#/components/schemas/Auth' # Gunakan skema yang sesuai di sini
       responses:
         '201':
-          description: Data successfully created
+          description: Data successfully login
         '400':
           description: Invalid input or request body
   /createproduct:
@@ -197,7 +197,7 @@ paths:
               $ref: '#/components/schemas/product' # Gunakan skema yang sesuai di sini
       responses:
         '201':
-          description: Data successfully created
+          description: Data successfully Update
         '400':
           description: Invalid input or request body
       security:
@@ -217,7 +217,7 @@ paths:
               $ref: '#/components/schemas/DeleteProduct' # Gunakan skema yang sesuai di sini
       responses:
         '201':
-          description: Data successfully created
+          description: Data successfully delete
         '400':
           description: Invalid input or request body
       security:
@@ -237,7 +237,7 @@ paths:
               $ref: '#/components/schemas/DeleteProduct' # Gunakan skema yang sesuai di sini
       responses:
         '201':
-          description: Data successfully created
+          description: Data successfully get
         '400':
           description: Invalid input or request body
   /createcontent:
@@ -264,9 +264,9 @@ paths:
     patch:
       tags:
         - Content
-      summary: Create Content Data
-      description: Add new Content data
-      operationId: create Content
+      summary: Update Content Data
+      description: Update Content data
+      operationId: Update Content
       requestBody:
         required: true
         content:
@@ -275,7 +275,7 @@ paths:
               $ref: '#/components/schemas/content' # Gunakan skema yang sesuai di sini
       responses:
         '201':
-          description: Data successfully created
+          description: Data successfully Update
         '400':
           description: Invalid input or request body
       security:
