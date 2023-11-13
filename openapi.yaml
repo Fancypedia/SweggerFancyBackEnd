@@ -279,6 +279,26 @@ paths:
         '400':
           description: Invalid input or request body
       security:
+        - token: []
+  /deletecontent:
+    delete:
+      tags:
+        - Product
+      summary: delete Product Data berdasarkan nomor id
+      description: delete Product data
+      operationId: delete Product
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DeleteProduct' # Gunakan skema yang sesuai di sini
+      responses:
+        '201':
+          description: Data successfully delete
+        '400':
+          description: Invalid input or request body
+      security:
         - token: []                
 components:
   schemas:
