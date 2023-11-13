@@ -283,7 +283,7 @@ paths:
   /deletecontent:
     delete:
       tags:
-        - Product
+        - Content
       summary: delete Product Data berdasarkan nomor id
       description: delete Product data
       operationId: delete Product
