@@ -284,9 +284,9 @@ paths:
     delete:
       tags:
         - Content
-      summary: delete Product Data berdasarkan nomor id
-      description: delete Product data
-      operationId: delete Product
+      summary: delete Content Data berdasarkan nomor id
+      description: delete Content data
+      operationId: delete Content
       requestBody:
         required: true
         content:
