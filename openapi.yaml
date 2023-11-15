@@ -49,7 +49,7 @@ paths:
                   $ref: '#/components/schemas/Peta'
         '400':
           description: Invalid status value
-  /getAllcommned:
+  /getallcomment:
     get:
       tags:
         - Data Grafik
@@ -64,7 +64,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Peta'
+                  $ref: '#/components/schemas/CreateComment'
         '400':
           description: Invalid status value
   /getallproduct:
@@ -100,7 +100,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/product'
+                  $ref: '#/components/schemas/content'
         '400':
           description: Invalid status value
   /function-16:
