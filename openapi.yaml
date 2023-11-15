@@ -304,9 +304,9 @@ paths:
     delete:
       tags:
         - Comment
-      summary: delete Content Data berdasarkan nomor id
-      description: delete Content data
-      operationId: delete Content
+      summary: delete Comment Data berdasarkan nomor id
+      description: delete Comment data
+      operationId: delete Comment
       requestBody:
         required: true
         content:
@@ -324,9 +324,9 @@ paths:
     post:
       tags:
         - Comment
-      summary: delete Content Data berdasarkan nomor id
-      description: delete Content data
-      operationId: delete Content
+      summary: Create Comment Data berdasarkan nomor id
+      description: Create Comment data
+      operationId: Create Comment
       requestBody:
         required: true
         content:
@@ -335,7 +335,7 @@ paths:
               $ref: '#/components/schemas/DeleteContent' # Gunakan skema yang sesuai di sini
       responses:
         '201':
-          description: Data successfully delete
+          description: Data successfully Create
         '400':
           description: Invalid input or request body
       security:
@@ -344,9 +344,9 @@ paths:
     patch:
       tags:
         - Comment
-      summary: Update Content Data berdasarkan nomor id
-      description: Update Content data
-      operationId: Update Content
+      summary: Update Comment Data berdasarkan nomor id
+      description: Update Comment data
+      operationId: Update Comment
       requestBody:
         required: true
         content:
