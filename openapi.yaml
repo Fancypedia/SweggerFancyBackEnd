@@ -103,6 +103,24 @@ paths:
                   $ref: '#/components/schemas/content'
         '400':
           description: Invalid status value
+  /getallevent:
+    get:
+      tags:
+        - Data Grafik
+      summary: Get Data Event Global
+      description: List Data Event Global
+      operationId: Event Global
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/content'
+        '400':
+          description: Invalid status value
   /function-16:
     post:
       tags:
