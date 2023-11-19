@@ -318,6 +318,26 @@ paths:
           description: Invalid input or request body
       security:
         - token: []
+  /deleteevent:
+    delete:
+      tags:
+        - Event Global
+      summary: delete Content Data berdasarkan nomor id
+      description: delete Content data
+      operationId: delete Content
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DeleteContent' # Gunakan skema yang sesuai di sini
+      responses:
+        '201':
+          description: Data successfully delete
+        '400':
+          description: Invalid input or request body
+      security:
+        - token: []
   /deletecomment:
     delete:
       tags:
