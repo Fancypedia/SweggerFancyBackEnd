@@ -358,6 +358,26 @@ paths:
           description: Invalid input or request body
       security:
         - token: []
+  /createevent:
+    post:
+      tags:
+        - Event Global
+      summary: Create Comment Data
+      description: Create Comment data
+      operationId: Create Comment
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateComment' # Gunakan skema yang sesuai di sini
+      responses:
+        '201':
+          description: Data successfully Create
+        '400':
+          description: Invalid input or request body
+      security:
+        - token: []
   /updatecomment:
     patch:
       tags:
