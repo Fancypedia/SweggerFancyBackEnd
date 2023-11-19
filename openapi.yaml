@@ -377,6 +377,26 @@ paths:
         '400':
           description: Invalid input or request body
       security:
+        - token: []
+  /updateeventglobal:
+    patch:
+      tags:
+        - Event Global
+      summary: Update Comment Data berdasarkan nomor id
+      description: Update Comment data
+      operationId: Update Comment
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateComment' # Gunakan skema yang sesuai di sini
+      responses:
+        '201':
+          description: Data successfully Update
+        '400':
+          description: Invalid input or request body
+      security:
         - token: []                
 components:
   schemas:
