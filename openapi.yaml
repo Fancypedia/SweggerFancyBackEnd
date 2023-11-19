@@ -322,9 +322,9 @@ paths:
     delete:
       tags:
         - Event Global
-      summary: delete Content Data berdasarkan nomor id
-      description: delete Content data
-      operationId: delete Content
+      summary: delete Event Global Data berdasarkan nomor id
+      description: delete Event Global data
+      operationId: delete Event Global
       requestBody:
         required: true
         content:
@@ -382,9 +382,9 @@ paths:
     post:
       tags:
         - Event Global
-      summary: Create Comment Data
-      description: Create Comment data
-      operationId: Create Comment
+      summary: Create Event Global Data
+      description: Create Event Global data
+      operationId: Create Event Global
       requestBody:
         required: true
         content:
