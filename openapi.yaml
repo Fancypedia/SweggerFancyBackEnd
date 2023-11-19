@@ -330,7 +330,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/DeleteContent' # Gunakan skema yang sesuai di sini
+              $ref: '#/components/schemas/DeleteEventGlobal' # Gunakan skema yang sesuai di sini
       responses:
         '201':
           description: Data successfully delete
@@ -539,6 +539,12 @@ components:
           type: int
           example: 123
     DeleteComment:
+      type: object
+      properties:
+        nomorid:
+          type: int
+          example: 123
+    DeleteEventGlobal:
       type: object
       properties:
         nomorid:
