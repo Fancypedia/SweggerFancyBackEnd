@@ -139,7 +139,7 @@ paths:
                   $ref: '#/components/schemas/content'
         '400':
           description: Invalid status value
-  /createabout:
+  /getallabout:
     get:
       tags:
         - Data Grafik
