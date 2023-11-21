@@ -154,7 +154,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/content'
+                  $ref: '#/components/schemas/about'
         '400':
           description: Invalid status value
   /function-16:
