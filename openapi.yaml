@@ -472,8 +472,12 @@ paths:
             schema:
               $ref: '#/components/schemas/CreateComment' # Gunakan skema yang sesuai di sini
       responses:
-        '201':
-          description: Data successfully Update
+        '200':
+          description: Success Update Event Global
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EventGlobal'
         '400':
           description: Invalid input or request body
       security:
