@@ -428,8 +428,12 @@ paths:
             schema:
               $ref: '#/components/schemas/EventGlobal' # Gunakan skema yang sesuai di sini
       responses:
-        '201':
-          description: Data successfully Create
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EventGlobal'
         '400':
           description: Invalid input or request body
       security:
@@ -446,7 +450,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/CreateComment' # Gunakan skema yang sesuai di sini
+              $ref: '#/components' # Gunakan skema yang sesuai di sini
       responses:
         '201':
           description: Data successfully Update
@@ -698,13 +702,18 @@ components:
         Status:
           type: bool
           example: true
-  requestBodies:
     AuthReq:
       description: Request Authentication
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/Auth'
+    CreateEvent:
+      description: Request Authentication
+      eventglobal:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/EventGlobal'
     UserArray:
       description: List of user object
       content:
