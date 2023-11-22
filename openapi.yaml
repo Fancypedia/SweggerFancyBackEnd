@@ -502,6 +502,29 @@ components:
         password:
           type: string
           example: ganteng
+    EventGlobal:
+      ID: 20
+      Title: "sda"
+      Description: "asd"
+      Tanggal: "132"
+      Image: "132"
+      Harga: 1232
+      Content:
+        - id: 1
+          Content: "mahya"
+          Image: "all"
+          Description: "all"
+          status: true
+      Product:
+        - Nomorid: 1
+          Name: "testing"
+          Description: "mahya"
+          Price: 10000
+          Size: "XL"
+          Stock: 100
+          Image: "https://images3.alphacoders.com/165/thumb-1920-165265.jpg"
+          status: true
+      Status: true
     about:
       type: object
       properties:
