@@ -596,27 +596,6 @@ components:
           Image: string
           status: boolean
       Status: boolean
-    about:
-      type: object
-      properties:
-        id:
-          type: int
-          example: 123
-        Content:
-          type: string
-          example: udin123
-        Image:
-          type: string
-          example: kamu knp?
-        Descriptopn:
-          type: int
-          example: 123
-        Product:
-          type: string
-          example: aku laper
-        Status:
-          type: bool
-          example: true
     AuthResponse:
       type: object
       properties:
