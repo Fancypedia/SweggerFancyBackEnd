@@ -604,6 +604,100 @@ components:
           Image: string
           status: boolean
       Status: boolean
+    about:
+      type: object
+      properties:
+        id:
+          type: int
+          example: 123
+        Title:
+          type: string
+          example: udin123
+        Description:
+          type: string
+          example: kamu knp?
+        Tanggal:
+          type: string
+          example: aku laper
+        Image:
+          type: string
+          example: aku laper
+        Harga:
+          type: int
+          example: 123
+        Content:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: int
+                example: 123
+              Content:
+                type: string
+                example: udin123
+              Image:
+                type: string
+                example: kamu knp?
+              Description:
+                type: string
+                example: aku laper
+              status:
+                type: bool
+                example: true
+        Product:
+          type: array
+          items:
+            type: object
+            properties:
+              Nomorid:
+                type: int
+                example: 123
+              Name:
+                type: string
+                example: udin123
+              Description:
+                type: string
+                example: kamu knp?
+              Price:
+                type: int
+                example: 123
+              Size:
+                type: string
+                example: aku laper
+              Stock:
+                type: int
+                example: 123
+              Image:
+                type: string
+                example: aku laper
+              status:
+                type: bool
+                example: true
+        Status:
+          type: bool
+          example: true
+      Title: string
+      Description: string
+      Tanggal: string
+      Image: string
+      Harga: number
+      Content:
+        - id: number
+          Content: string
+          Image: string
+          Description: string
+          status: boolean
+      Product:
+        - Nomorid: number
+          Name: string
+          Description: string
+          Price: number
+          Size: string
+          Stock: number
+          Image: string
+          status: boolean
+      Status: boolean
     AuthResponse:
       type: object
       properties:
