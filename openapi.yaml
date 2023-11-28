@@ -65,7 +65,7 @@ paths:
   /getallproduct:
     get:
       tags:
-        - Data Grafik
+        - Data Grafik Admin
       summary: Get Data Product
       description: List Data Product
       operationId: getProduct
