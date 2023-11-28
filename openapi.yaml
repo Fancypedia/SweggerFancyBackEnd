@@ -83,7 +83,7 @@ paths:
     get:
       tags:
         - Data Grafik Admin
-      summary: Get Data Contentt
+      summary: Get Data Content
       description: List Data Contentt
       operationId: getContent
       responses:
