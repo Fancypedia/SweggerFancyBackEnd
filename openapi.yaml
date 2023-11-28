@@ -24,7 +24,7 @@ tags:
       description: Deskripsi dan Kode Program
       url: https://pkg.go.dev/github.com/Fancypedia/fancybackenddd
   - name: user
-    description: Get Token and Authorize
+    description: Create Account User
 paths:
   /gislocation:
     get:
