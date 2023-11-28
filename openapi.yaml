@@ -80,9 +80,8 @@ paths:
           content:
             application/json:
               schema:
-                type: array
                 items:
-                  $ref: '#/components/schemas/product'
+                  $ref: '#/components/schemas/CreateProduct'
         '400':
           description: Invalid status value
   /getallcontent:
@@ -157,7 +156,25 @@ paths:
                   $ref: '#/components/schemas/about'
         '400':
           description: Invalid status value
-  /function-16:
+  /getallblog:
+    get:
+      tags:
+        - Data Grafik
+      summary: Get Blog 
+      description: List Blog 
+      operationId: Event Blog
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/about'
+        '400':
+          description: Invalid status value
+  /loginbaru:
     post:
       tags:
         - auth
@@ -178,26 +195,6 @@ paths:
                 $ref: '#/components/schemas/AuthResponse'
         '405':
           description: Invalid input
-  /postgis:  # Penambahan endpoint Create GIS
-    post:
-      tags:
-        - Create GIS
-      summary: Create GIS Data
-      description: Add new GIS data
-      operationId: createGIS
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Peta' # Gunakan skema yang sesuai di sini
-      responses:
-        '201':
-          description: Data successfully created
-        '400':
-          description: Invalid input or request body
-      security:
-        - token: []
   /login:
     post:
       tags:
@@ -216,7 +213,7 @@ paths:
           description: Data successfully login
         '400':
           description: Invalid input or request body
-  /createproduct:
+  /createproductfix:
     post:
       tags:
         - Product
@@ -241,7 +238,7 @@ paths:
           description: Invalid input or request body
       security:
         - token: []
-  /updateproduct:
+  /updateproductt:
     patch:
       tags:
         - Product
@@ -291,25 +288,7 @@ paths:
           description: Invalid input or request body
       security:
         - token: []
-  /getproductid:
-    post:
-      tags:
-        - Product
-      summary: delete Product Data berdasarkan nomor id
-      description: delete Product data
-      operationId: delete Product
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/DeleteProduct' # Gunakan skema yang sesuai di sini
-      responses:
-        '201':
-          description: Data successfully get
-        '400':
-          description: Invalid input or request body
-  /createcontent:
+  /createcontent-1:
     post:
       tags:
         - Content
@@ -323,13 +302,19 @@ paths:
             schema:
               $ref: '#/components/schemas/content' # Gunakan skema yang sesuai di sini
       responses:
-        '201':
-          description: Data successfully created
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/content'
         '400':
           description: Invalid input or request body
       security:
         - token: []
-  /updatecontent:
+  /updatecontentt:
     patch:
       tags:
         - Content
@@ -343,13 +328,19 @@ paths:
             schema:
               $ref: '#/components/schemas/content' # Gunakan skema yang sesuai di sini
       responses:
-        '201':
-          description: Data successfully Update
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/content'
         '400':
           description: Invalid input or request body
       security:
         - token: []
-  /deletecontent:
+  /deletecontentt:
     delete:
       tags:
         - Content
@@ -363,13 +354,19 @@ paths:
             schema:
               $ref: '#/components/schemas/DeleteContent' # Gunakan skema yang sesuai di sini
       responses:
-        '201':
-          description: Data successfully delete
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/content'
         '400':
           description: Invalid input or request body
       security:
         - token: []
-  /deleteeventglobal:
+  /deleteeventgloball:
     delete:
       tags:
         - Event Global
@@ -383,16 +380,48 @@ paths:
             schema:
               $ref: '#/components/schemas/DeleteEventGlobal' # Gunakan skema yang sesuai di sini
       responses:
-        '201':
-          description: Data successfully delete
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/EventGlobal'
         '400':
           description: Invalid input or request body
       security:
         - token: []
-  /deletecomment:
+  /deletecomment-1:
     delete:
       tags:
         - Comment
+      summary: delete Comment Data berdasarkan nomor id
+      description: delete Comment data
+      operationId: delete Comment
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DeleteComment' # Gunakan skema yang sesuai di sini
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/CreateComment'
+        '400':
+          description: Invalid input or request body
+      security:
+        - token: []
+  /deleteblogg:
+    delete:
+      tags:
+        - Blog
       summary: delete Comment Data berdasarkan nomor id
       description: delete Comment data
       operationId: delete Comment
@@ -409,7 +438,7 @@ paths:
           description: Invalid input or request body
       security:
         - token: []
-  /createcomment:
+  /createcommentt:
     post:
       tags:
         - Comment
@@ -423,13 +452,45 @@ paths:
             schema:
               $ref: '#/components/schemas/CreateComment' # Gunakan skema yang sesuai di sini
       responses:
-        '201':
-          description: Data successfully Create
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/CreateComment'
         '400':
           description: Invalid input or request body
       security:
         - token: []
-  /createevent:
+  /createblogg:
+    post:
+      tags:
+        - Blog
+      summary: Create Comment Data
+      description: Create Comment data
+      operationId: Create Comment
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/about' # Gunakan skema yang sesuai di sini
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/about'
+        '400':
+          description: Invalid input or request body
+      security:
+        - token: []
+  /createeventglobal:
     post:
       tags:
         - Event Global
@@ -453,7 +514,31 @@ paths:
           description: Invalid input or request body
       security:
         - token: []
-  /updatecomment:
+  /upadateblog-1:
+    patch:
+      tags:
+        - Blog
+      summary: Update Comment Data berdasarkan nomor id
+      description: Update Comment data
+      operationId: Update Comment
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/about' # Gunakan skema yang sesuai di sini
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/about'
+        '400':
+          description: Invalid input or request body
+      security:
+        - token: []
+  /updatecommentt:
     patch:
       tags:
         - Comment
@@ -465,15 +550,21 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components' # Gunakan skema yang sesuai di sini
+              $ref: '#/components/schemas/CreateComment' # Gunakan skema yang sesuai di sini
       responses:
-        '201':
-          description: Data successfully Update
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/CreateComment'
         '400':
           description: Invalid input or request body
       security:
         - token: []
-  /updateeventglobal:
+  /updateeventgloball:
     patch:
       tags:
         - Event Global
