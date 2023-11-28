@@ -82,7 +82,7 @@ paths:
   /getallcontent:
     get:
       tags:
-        - Data Grafik
+        - Data Grafik Admin
       summary: Get Data Content
       description: List Data Content
       operationId: getContent
