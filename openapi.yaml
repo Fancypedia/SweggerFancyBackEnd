@@ -53,7 +53,7 @@ paths:
       operationId: Getcomment
       responses:
         '200':
-          description: successful operation
+          description: successful operation comment
           content:
             application/json:
               schema:
