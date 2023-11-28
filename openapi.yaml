@@ -47,7 +47,7 @@ paths:
   /getallcomment:
     get:
       tags:
-        - Data Grafik
+        - Data Grafik Admin
       summary: Get Data comment
       description: List Data comment
       operationId: Getcomment
