@@ -18,11 +18,6 @@ externalDocs:
 servers:
   - url: https://asia-southeast2-testlogin-366704.cloudfunctions.net
 tags:
-  - name: Create GIS
-    description: Data Geo Spasial
-    externalDocs:
-      description: Deskripsi dan Kode Program
-      url: https://pkg.go.dev/github.com/Fancypedia/fancybackenddd
   - name: auth
     description: Auth to Access to API
     externalDocs:
