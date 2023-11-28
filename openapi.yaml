@@ -84,7 +84,7 @@ paths:
       tags:
         - Data Grafik Admin
       summary: Get Data Contentt
-      description: List Data Content
+      description: List Data Contentt
       operationId: getContent
       responses:
         '200':
