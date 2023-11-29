@@ -471,7 +471,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/about' # Gunakan skema yang sesuai di sini
+              $ref: '#/components/schemas/blogfix' # Gunakan skema yang sesuai di sini
       responses:
         '200':
           description: successful operation
