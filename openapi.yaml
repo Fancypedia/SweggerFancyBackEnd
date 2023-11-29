@@ -732,16 +732,6 @@ components:
           Image: string
           status: boolean
       Status: boolean
-    # "ID":1,
-    # "content_one":"asdbhiadsh",
-    # "Content_two":"6132781723",
-    # "Image":"713298789123789132",
-    # "Title":"sad",
-    # "Title_two":"asd",
-    # "Description":"asd",
-    # "description_two":"das",
-    # "description_3":"dsa",
-    # "status":true
     blogfix:
       type: object
       properties:
