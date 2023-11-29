@@ -191,7 +191,7 @@ paths:
         - Create Account
       summary: Create Account
       description: Create Account
-      operationId: authService
+      operationId: CreateAccount Service
       requestBody:
         content:
           application/json:
