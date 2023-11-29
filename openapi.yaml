@@ -18,11 +18,6 @@ externalDocs:
 servers:
   - url: https://asia-southeast2-testlogin-366704.cloudfunctions.net
 tags:
-  - name: Authentikasi
-    description: Auth to Access to API
-    externalDocs:
-      description: Deskripsi dan Kode Program
-      url: https://pkg.go.dev/github.com/Fancypedia/fancybackenddd
   - name: user
     description: Create Account User
 paths:
@@ -188,6 +183,27 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/AuthResponse'
+        '405':
+          description: Invalid input
+  /createacountfix:
+    post:
+      tags:
+        - Create Account
+      summary: Create Account
+      description: Create Account
+      operationId: authService
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateAccount'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateAccount'
         '405':
           description: Invalid input
   /login:
@@ -644,6 +660,18 @@ components:
         password:
           type: string
           example: ganteng
+    CreateAccount:
+      type: object
+      properties:
+        username:
+          type: string
+          example: raull
+        password:
+          type: string
+          example: ganteng
+        phone:
+          type: string
+          example: 62881023806530
     EventGlobal:
       type: object
       properties:
