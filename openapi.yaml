@@ -425,7 +425,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/blogfix' # Gunakan skema yang sesuai di sini
+              $ref: '#/components/schemas/blogdelete' # Gunakan skema yang sesuai di sini
       responses:
         '200':
           description: successful operation
@@ -780,6 +780,12 @@ components:
       description_two: string
       description_3: string
       status: boolean
+    blogdelete:
+      type: object
+      properties:
+        id:
+          type: int
+          example: 123
     event:
       type: object
       properties:
