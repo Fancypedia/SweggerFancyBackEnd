@@ -732,6 +732,58 @@ components:
           Image: string
           status: boolean
       Status: boolean
+    # "ID":1,
+    # "content_one":"asdbhiadsh",
+    # "Content_two":"6132781723",
+    # "Image":"713298789123789132",
+    # "Title":"sad",
+    # "Title_two":"asd",
+    # "Description":"asd",
+    # "description_two":"das",
+    # "description_3":"dsa",
+    # "status":true
+    blogfix:
+      type: object
+      properties:
+        id:
+          type: int
+          example: 123
+        content_one:
+          type: string
+          example: udin123
+        Content_two:
+          type: string
+          example: kamu knp?
+        Image:
+          type: string
+          example: aku laper
+        Title:
+          type: string
+          example: aku laper
+        Title_two:
+          type: string
+          example: aku laper
+        Description:
+          type: string
+          example: aku laper
+        description_two:
+          type: string
+          example: aku laper
+        description_3:
+          type: string
+          example: aku laper
+        status:
+          type: bool
+          example: true
+      content_one: string
+      Content_two: string
+      Image: string
+      Title: string
+      Title_two: string
+      Description: string
+      description_two: string
+      description_3: string
+      status: boolean
     event:
       type: object
       properties:
