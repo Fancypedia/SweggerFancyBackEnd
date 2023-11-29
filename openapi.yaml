@@ -577,7 +577,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/CreateComment' # Gunakan skema yang sesuai di sini
+              $ref: '#/components/schemas/EventGlobal' # Gunakan skema yang sesuai di sini
       responses:
         '200':
           description: Success Update Event Global
