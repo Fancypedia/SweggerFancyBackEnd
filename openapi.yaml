@@ -480,7 +480,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/about'
+                  $ref: '#/components/schemas/blogfix'
         '400':
           description: Invalid input or request body
       security:
