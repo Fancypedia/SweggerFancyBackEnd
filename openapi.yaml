@@ -1052,7 +1052,7 @@ components:
     DeleteComment:
       type: object
       properties:
-        nomorid:
+        id:
           type: int
           example: 123
     DeleteEventGlobal:
