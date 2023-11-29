@@ -665,10 +665,10 @@ components:
       properties:
         username:
           type: string
-          example: raull
+          example: contoh
         password:
           type: string
-          example: ganteng
+          example: contoh
         phone:
           type: string
           example: 62881023806530
