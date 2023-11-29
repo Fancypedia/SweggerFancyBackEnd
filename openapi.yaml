@@ -669,7 +669,7 @@ components:
         password:
           type: string
           example: contoh
-        phone:
+        no_whatsapp:
           type: string
           example: 62881023806530
     EventGlobal:
