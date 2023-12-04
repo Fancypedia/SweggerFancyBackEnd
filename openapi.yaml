@@ -299,110 +299,110 @@ paths:
           description: Invalid input or request body
       security:
         - token: []
-  /createcontent-1:
-    post:
-      tags:
-        - Content
-      summary: Create Content Data
-      description: Add new Content data
-      operationId: create Content
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/content' # Gunakan skema yang sesuai di sini
-      responses:
-        '200':
-          description: successful operation
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/content'
-        '400':
-          description: Invalid input or request body
-      security:
-        - token: []
-  /updatecontentt:
-    patch:
-      tags:
-        - Content
-      summary: Update Content Data
-      description: Update Content data
-      operationId: Update Content
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/content' # Gunakan skema yang sesuai di sini
-      responses:
-        '200':
-          description: successful operation
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/content'
-        '400':
-          description: Invalid input or request body
-      security:
-        - token: []
-  /deletecontentt:
-    delete:
-      tags:
-        - Content
-      summary: delete Content Data berdasarkan nomor id
-      description: delete Content data
-      operationId: delete Content
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/DeleteContent' # Gunakan skema yang sesuai di sini
-      responses:
-        '200':
-          description: successful operation
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/content'
-        '400':
-          description: Invalid input or request body
-      security:
-        - token: []
-  /deleteeventgloball:
-    delete:
-      tags:
-        - Event Global
-      summary: delete Event Global Data berdasarkan nomor id
-      description: delete Event Global data
-      operationId: delete Event Global
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/DeleteEventGlobal' # Gunakan skema yang sesuai di sini
-      responses:
-        '200':
-          description: successful operation
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/EventGlobal'
-        '400':
-          description: Invalid input or request body
-      security:
-        - token: []
+  # /createcontent-1:
+  #   post:
+  #     tags:
+  #       - Content
+  #     summary: Create Content Data
+  #     description: Add new Content data
+  #     operationId: create Content
+  #     requestBody:
+  #       required: true
+  #       content:
+  #         application/json:
+  #           schema:
+  #             $ref: '#/components/schemas/content' # Gunakan skema yang sesuai di sini
+  #     responses:
+  #       '200':
+  #         description: successful operation
+  #         content:
+  #           application/json:
+  #             schema:
+  #               type: array
+  #               items:
+  #                 $ref: '#/components/schemas/content'
+  #       '400':
+  #         description: Invalid input or request body
+  #     security:
+  #       - token: []
+  # /updatecontentt:
+  #   patch:
+  #     tags:
+  #       - Content
+  #     summary: Update Content Data
+  #     description: Update Content data
+  #     operationId: Update Content
+  #     requestBody:
+  #       required: true
+  #       content:
+  #         application/json:
+  #           schema:
+  #             $ref: '#/components/schemas/content' # Gunakan skema yang sesuai di sini
+  #     responses:
+  #       '200':
+  #         description: successful operation
+  #         content:
+  #           application/json:
+  #             schema:
+  #               type: array
+  #               items:
+  #                 $ref: '#/components/schemas/content'
+  #       '400':
+  #         description: Invalid input or request body
+  #     security:
+  #       - token: []
+  # /deletecontentt:
+  #   delete:
+  #     tags:
+  #       - Content
+  #     summary: delete Content Data berdasarkan nomor id
+  #     description: delete Content data
+  #     operationId: delete Content
+  #     requestBody:
+  #       required: true
+  #       content:
+  #         application/json:
+  #           schema:
+  #             $ref: '#/components/schemas/DeleteContent' # Gunakan skema yang sesuai di sini
+  #     responses:
+  #       '200':
+  #         description: successful operation
+  #         content:
+  #           application/json:
+  #             schema:
+  #               type: array
+  #               items:
+  #                 $ref: '#/components/schemas/content'
+  #       '400':
+  #         description: Invalid input or request body
+  #     security:
+  #       - token: []
+  # /deleteeventgloball:
+  #   delete:
+  #     tags:
+  #       - Event Global
+  #     summary: delete Event Global Data berdasarkan nomor id
+  #     description: delete Event Global data
+  #     operationId: delete Event Global
+  #     requestBody:
+  #       required: true
+  #       content:
+  #         application/json:
+  #           schema:
+  #             $ref: '#/components/schemas/DeleteEventGlobal' # Gunakan skema yang sesuai di sini
+  #     responses:
+  #       '200':
+  #         description: successful operation
+  #         content:
+  #           application/json:
+  #             schema:
+  #               type: array
+  #               items:
+  #                 $ref: '#/components/schemas/EventGlobal'
+  #       '400':
+  #         description: Invalid input or request body
+  #     security:
+  #       - token: []
   /deletecomment-1:
     delete:
       tags:
@@ -507,30 +507,30 @@ paths:
           description: Invalid input or request body
       security:
         - token: []
-  /createeventglobal:
-    post:
-      tags:
-        - Event Global
-      summary: Create Event Global Data
-      description: Create Event Global data
-      operationId: Create Event Global
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/EventGlobal' # Gunakan skema yang sesuai di sini
-      responses:
-        '200':
-          description: successful operation
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/EventGlobal'
-        '400':
-          description: Invalid input or request body
-      security:
-        - token: []
+  # /createeventglobal:
+  #   post:
+  #     tags:
+  #       - Event Global
+  #     summary: Create Event Global Data
+  #     description: Create Event Global data
+  #     operationId: Create Event Global
+  #     requestBody:
+  #       required: true
+  #       content:
+  #         application/json:
+  #           schema:
+  #             $ref: '#/components/schemas/EventGlobal' # Gunakan skema yang sesuai di sini
+  #     responses:
+  #       '200':
+  #         description: successful operation
+  #         content:
+  #           application/json:
+  #             schema:
+  #               $ref: '#/components/schemas/EventGlobal'
+  #       '400':
+  #         description: Invalid input or request body
+  #     security:
+  #       - token: []
   /upadateblog-1:
     patch:
       tags:
@@ -581,30 +581,30 @@ paths:
           description: Invalid input or request body
       security:
         - token: []
-  /updateeventgloball:
-    patch:
-      tags:
-        - Event Global
-      summary: Update Comment Data berdasarkan nomor id
-      description: Update Comment data
-      operationId: Update Comment
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/EventGlobal' # Gunakan skema yang sesuai di sini
-      responses:
-        '200':
-          description: Success Update Event Global
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/EventGlobal'
-        '400':
-          description: Invalid input or request body
-      security:
-        - token: []                
+  # /updateeventgloball:
+  #   patch:
+  #     tags:
+  #       - Event Global
+  #     summary: Update Comment Data berdasarkan nomor id
+  #     description: Update Comment data
+  #     operationId: Update Comment
+  #     requestBody:
+  #       required: true
+  #       content:
+  #         application/json:
+  #           schema:
+  #             $ref: '#/components/schemas/EventGlobal' # Gunakan skema yang sesuai di sini
+  #     responses:
+  #       '200':
+  #         description: Success Update Event Global
+  #         content:
+  #           application/json:
+  #             schema:
+  #               $ref: '#/components/schemas/EventGlobal'
+  #       '400':
+  #         description: Invalid input or request body
+  #     security:
+  #       - token: []                
 components:
   schemas:
     Peta:
