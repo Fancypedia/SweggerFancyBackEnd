@@ -54,7 +54,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/CreateComment'
+                  $ref: '#/components/schemas/CretaeCOmment'
         '400':
           description: Invalid status value
   /getallproduct:
@@ -424,7 +424,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/CreateComment'
+                  $ref: '#/components/schemas/CretaeCOmment'
         '400':
           description: Invalid input or request body
       security:
@@ -467,7 +467,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/CreateComment' # Gunakan skema yang sesuai di sini
+              $ref: '#/components/schemas/CretaeCOmment' # Gunakan skema yang sesuai di sini
       responses:
         '200':
           description: successful operation
@@ -476,7 +476,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/CreateComment'
+                  $ref: '#/components/schemas/CretaeCOmment'
         '400':
           description: Invalid input or request body
       security:
@@ -567,7 +567,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/CreateComment' # Gunakan skema yang sesuai di sini
+              $ref: '#/components/schemas/CretaeCOmment' # Gunakan skema yang sesuai di sini
       responses:
         '200':
           description: successful operation
@@ -576,7 +576,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/CreateComment'
+                  $ref: '#/components/schemas/CretaeCOmment'
         '400':
           description: Invalid input or request body
       security:
@@ -624,6 +624,38 @@ components:
           properties:
             name:
               type: string
+#               {
+# "ID":7777777,
+# "Username":"mahya",
+# "comment":"ads",
+# "Questions":"easd",
+# "Tanggal":"23112",
+# "Status":false
+# }
+    CretaeCOmment:
+      type: object
+      properties:
+        ID:
+          type: int
+          example: 123
+        Username:
+          type: string
+          example: udin123
+        Comment:
+          type: string
+          example: kamu knp?
+        Answer:
+          type: string
+          example: aku gpp
+        Question:
+          type: string
+          example: aku laper
+        Tanggal:
+          type: string
+          example: "23-09-32"
+        Status:
+          type: bool
+          example: true
     CreateProduct:
       type: object
       properties:
