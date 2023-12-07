@@ -18,8 +18,8 @@ externalDocs:
 servers:
   - url: https://asia-southeast2-testlogin-366704.cloudfunctions.net
 tags:
-  - name: user
-    description: Create Account User
+  - name: Login User
+    description: Login User
 paths:
   /gislocation:
     get:
@@ -167,7 +167,7 @@ paths:
   /loginbaru:
     post:
       tags:
-        - auth
+        - ADMIN
       summary: Login get Token
       description: Login and Get User Token
       operationId: authService
@@ -188,7 +188,7 @@ paths:
   /createacountfix:
     post:
       tags:
-        - Create Account
+        - Create Account FOR USER
       summary: Create Account
       description: Create Account
       operationId: CreateAccount Service
@@ -206,10 +206,28 @@ paths:
                 $ref: '#/components/schemas/CreateAccount'
         '405':
           description: Invalid input
+  /login-4:
+    get:
+      tags:
+        - LOGIN WITH TOKEN
+      summary: Get username using token
+      description: Get User
+      operationId: Get User
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/tokenuser'
+        '405':
+          description: Invalid input
+      security:
+        - token: []
   /login:
     post:
       tags:
-        - user
+        - Login User
       summary: login user
       description: login user
       operationId: login user
@@ -1143,6 +1161,18 @@ components:
         Status:
           type: bool
           example: true
+    tokenuser:
+          type: object
+          properties:
+            status:
+              type: bool
+              example: true
+            Message:
+              type: string
+              example: Berhasil decode token
+            username:
+              type: string
+              example: testing123              
     AuthReq:
       description: Request Authentication
       content:
