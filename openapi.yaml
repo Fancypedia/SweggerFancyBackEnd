@@ -25,8 +25,8 @@ paths:
     get:
       tags:
         - Data Grafik Admin
-      summary: Get Data comment
-      description: List Data comment
+      summary: Get Data all comment
+      description: Get Data all comment
       operationId: Getcomment
       responses:
         '200':
@@ -43,8 +43,8 @@ paths:
     get:
       tags:
         - Data Grafik Admin
-      summary: Get Data Product
-      description: List Data Product
+      summary: Get Data all Product
+      description: Get Data all Product
       operationId: getProduct
       responses:
         '200':
@@ -56,29 +56,28 @@ paths:
                   $ref: '#/components/schemas/CreateProduct'
         '400':
           description: Invalid status value
-  /getallcontent:
+  /getallblog:
     get:
       tags:
         - Data Grafik Admin
-      summary: Get Data Content
-      description: List Data Content
-      operationId: getContent
+      summary: Get Data all Blog
+      description: Get Data all Blog
+      operationId: Get Blog
       responses:
         '200':
           description: successful operation
           content:
             application/json:
               schema:
-                type: array
                 items:
-                  $ref: '#/components/schemas/content'
+                  $ref: '#/components/schemas/blogfix'
         '400':
           description: Invalid status value
-    /loginbaru:
+  /loginbaru:
     post:
       tags:
         - ADMIN
-      summary: Login get Token
+      summary: Login get Token for Create Product,Blog,Comment
       description: Login and Get User Token
       operationId: authService
       requestBody:
