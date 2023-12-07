@@ -98,7 +98,7 @@ paths:
   /createacountfix:
     post:
       tags:
-        - Create Account FOR USER
+        - Login User
       summary: Create Account
       description: Create Account
       operationId: CreateAccount Service
@@ -119,7 +119,7 @@ paths:
   /login-4:
     get:
       tags:
-        - LOGIN WITH TOKEN
+        - Login User
       summary: Get username using token
       description: Get User
       operationId: Get User
