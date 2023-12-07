@@ -220,8 +220,12 @@ paths:
             schema:
               $ref: '#/components/schemas/Auth' # Gunakan skema yang sesuai di sini
       responses:
-        '201':
-          description: Data successfully login
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Auth'
         '400':
           description: Invalid input or request body
   /createproductfix:
