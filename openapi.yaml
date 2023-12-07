@@ -21,24 +21,6 @@ tags:
   - name: Login User
     description: Login User
 paths:
-  /gislocation:
-    get:
-      tags:
-        - Data Grafik 
-      summary: Get Data Geospasial
-      description: List Data Geospasial
-      operationId: getGeoJSON
-      responses:
-        '200':
-          description: successful operation
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Peta'
-        '400':
-          description: Invalid status value
   /getallcomment:
     get:
       tags:
@@ -92,79 +74,7 @@ paths:
                   $ref: '#/components/schemas/content'
         '400':
           description: Invalid status value
-  /getallevent:
-    get:
-      tags:
-        - Data Grafik
-      summary: Get Data Event 
-      description: List Data Event 
-      operationId: Event 
-      responses:
-        '200':
-          description: successful operation
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/event'
-        '400':
-          description: Invalid status value
-  /getalleventglobal:
-    get:
-      tags:
-        - Data Grafik
-      summary: Get Data Event Global
-      description: List Data Event Global
-      operationId: Event Global
-      responses:
-        '200':
-          description: successful operation
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/EventGlobal'
-        '400':
-          description: Invalid status value
-  /getallabout:
-    get:
-      tags:
-        - Data Grafik
-      summary: Get About 
-      description: List About 
-      operationId: Event About
-      responses:
-        '200':
-          description: successful operation
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/about'
-        '400':
-          description: Invalid status value
-  /getallblog:
-    get:
-      tags:
-        - Data Grafik
-      summary: Get Blog 
-      description: List Blog 
-      operationId: Event Blog
-      responses:
-        '200':
-          description: successful operation
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/about'
-        '400':
-          description: Invalid status value
-  /loginbaru:
+    /loginbaru:
     post:
       tags:
         - ADMIN
