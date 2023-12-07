@@ -210,9 +210,9 @@ paths:
     post:
       tags:
         - user
-      summary: Create Product Data
-      description: Add new Product data
-      operationId: create Product
+      summary: login user
+      description: login user
+      operationId: login user
       requestBody:
         required: true
         content:
