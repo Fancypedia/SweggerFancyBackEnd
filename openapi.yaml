@@ -38,7 +38,7 @@ paths:
                 items:
                   $ref: '#/components/schemas/CretaeCOmment'
         '400':
-          description: Invalid status value
+          description: Invalid response
   /getallproduct:
     get:
       tags:
@@ -55,7 +55,7 @@ paths:
                 items:
                   $ref: '#/components/schemas/CreateProduct'
         '400':
-          description: Invalid status value
+          description: Invalid response
   /getallblog:
     get:
       tags:
@@ -72,7 +72,7 @@ paths:
                 items:
                   $ref: '#/components/schemas/blogfix'
         '400':
-          description: Invalid status value
+          description: Invalid response
   /loginbaru:
     post:
       tags:
