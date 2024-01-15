@@ -11,7 +11,7 @@ info:
   license:
     name: Fancy Backend
     url: https://pkg.go.dev/github.com/Fancypedia/fancybackenddd
-  version: 1.0.11
+  version: 1.9.96
 externalDocs:
   description: Repo GCF
   url: https://pkg.go.dev/github.com/Fancypedia/fancybackenddd
