@@ -131,8 +131,6 @@ paths:
                   $ref: '#/components/schemas/CreateAccount'
         '400':
           description: Invalid input or request body
-      security:
-        - token: []
   /forgot-account-berkemah:
     post:
       tags:
