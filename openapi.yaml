@@ -1,106 +1,29 @@
 openapi: 3.0.3
 info:
-  title: DOKUMEN API FANCY BACKEND
+  title: DOKUMEN API  BERKEMAHS BACKEND
   description: >-
     Jelaskan disini apa saja yang perlu dijelaskan
     termasuk informasi yang diperlukan untuk dinilai
     term of service isi dari link repo dari swagger ini
-  termsOfService: https://pkg.go.dev/github.com/Fancypedia/fancybackenddd
   contact:
     email: raulmahya11@gmail.com
   license:
-    name: Fancy Backend
-    url: https://pkg.go.dev/github.com/Fancypedia/fancybackenddd
-  version: 1.9.96
+    name: Berkemah Backend
+    url: https://pkg.go.dev/github.com/raulmahya123/salon
+  version: 1.0.0
 externalDocs:
   description: Repo GCF
-  url: https://pkg.go.dev/github.com/Fancypedia/fancybackenddd
+  url: https://pkg.go.dev/github.com/raulmahya123/salon
 servers:
   - url: https://asia-southeast2-testlogin-366704.cloudfunctions.net
-tags:
-  - name: Login User
-    description: Login For User
 paths:
-  /getallcomment:
-    get:
-      tags:
-        - Data Grafik Admin
-      summary: Get Data all comment
-      description: Get Data all comment
-      operationId: Getcomment
-      responses:
-        '200':
-          description: successful operation comment
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/CretaeCOmment'
-        '400':
-          description: Invalid response
-  /getallproduct:
-    get:
-      tags:
-        - Data Grafik Admin
-      summary: Get Data all Product
-      description: Get Data all Product
-      operationId: getProduct
-      responses:
-        '200':
-          description: successful operation
-          content:
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CreateProduct'
-        '400':
-          description: Invalid response
-  /getallblog:
-    get:
-      tags:
-        - Data Grafik Admin
-      summary: Get Data all Blog
-      description: Get Data all Blog
-      operationId: Get Blog
-      responses:
-        '200':
-          description: successful operation
-          content:
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/blogfix'
-        '400':
-          description: Invalid response
-  /loginbaru:
+  /create-account-berkemah:
     post:
       tags:
-        - ADMIN
-      summary: Login get Token for Create Product,Blog,Comment
-      description: Login and Get User Token
-      operationId: authService
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Auth'
-      responses:
-        '200':
-          description: successful operation
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/AuthResponse'
-        '405':
-          description: Invalid input
-  /createacountfix:
-    post:
-      tags:
-        - Login User
-      summary: Create Account
-      description: Create Account
-      operationId: CreateAccount Service
+        - User / Admin
+      summary: Create User
+      description: Create User
+      operationId: CreateUser
       requestBody:
         content:
           application/json:
@@ -108,84 +31,70 @@ paths:
               $ref: '#/components/schemas/CreateAccount'
       responses:
         '200':
-          description: successful operation
+          description: successful operation user
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CreateAccount'
-        '405':
-          description: Invalid input
-  /login-4:
+                type: array
+                items:
+                  $ref: '#/components/schemas/CreateAccount'
+        '400':
+          description: Invalid response
+  /login_berkemah:
+    post:
+      tags:
+        - User / Admin
+      summary: Login
+      description: Login User
+      operationId: LoginAll
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Auth'
+      responses:
+        '200':
+          description: successful operation user
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Auth'
+        '400':
+          description: Invalid response
+  /get-user-berkemah:
     get:
       tags:
-        - Login User
-      summary: Get username using token
-      description: Get User
-      operationId: Get User
+        - User / Admin
+      summary: Get Data all User
+      description: Get Data all User
+      operationId: getUser
       responses:
         '200':
           description: successful operation
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/tokenuser'
-        '405':
-          description: Invalid input
-      security:
-        - token: []
-  /login-5:
-    get:
-      tags:
-        - ADMIN
-      summary: Get admin using token
-      description: Get admin
-      operationId: Get admin
-      responses:
-        '200':
-          description: successful operation
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/tokenuser'
-        '405':
-          description: Invalid input
-      security:
-        - token: []
-  /login:
-    post:
-      tags:
-        - Login User
-      summary: login user
-      description: login user
-      operationId: login user
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Auth' # Gunakan skema yang sesuai di sini
-      responses:
-        '200':
-          description: successful operation
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Auth'
+                items:
+                  $ref: '#/components/schemas/CreateAccount'
         '400':
-          description: Invalid input or request body
-  /createproductfix:
-    post:
+          description: Invalid response
+      security:
+        - token: []
+  /delete-user-berkemah:
+    delete:
       tags:
-        - Product
-      summary: Create Product Data
-      description: Add new Product data
-      operationId: create Product
+        - User / Admin
+      summary: delete Account user Data berdasarkan username
+      description: delete Account User
+      operationId: delete Account
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/CreateProduct' # Gunakan skema yang sesuai di sini
+              $ref: '#/components/schemas/CreateAccount' # Gunakan skema yang sesuai di sini
       responses:
         '200':
           description: successful operation
@@ -198,69 +107,19 @@ paths:
           description: Invalid input or request body
       security:
         - token: []
-  /updateproductt:
+  /update-name-berkemah:
     patch:
       tags:
-        - Product
-      summary: Updated Product Data berdasarkan nomor id
-      description: Updated Product data
-      operationId: Updated Product
+        - User / Admin
+      summary: Update name Data berdasarkan username
+      description: Update Username data
+      operationId: Update Username
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/product' # Gunakan skema yang sesuai di sini
-      responses:
-        '200':
-          description: successful operation
-          content:
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CreateProduct'
-        '400':
-          description: Invalid input or request body
-      security:
-        - token: []
-  /deleteproductt:
-    delete:
-      tags:
-        - Product
-      summary: delete Product Data berdasarkan nomor id
-      description: delete Product data
-      operationId: delete Product
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/DeleteProduct' # Gunakan skema yang sesuai di sini
-      responses:
-        '200':
-          description: successful operation
-          content:
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CreateProduct'
-        '400':
-          description: Invalid input or request body
-      security:
-        - token: []
-  /deletecomment-1:
-    delete:
-      tags:
-        - Comment
-      summary: delete Comment Data berdasarkan nomor id
-      description: delete Comment data
-      operationId: delete Comment
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/DeleteComment' # Gunakan skema yang sesuai di sini
+              $ref: '#/components/schemas/CreateAccount' # Gunakan skema yang sesuai di sini
       responses:
         '200':
           description: successful operation
@@ -269,50 +128,24 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/CretaeCOmment'
+                  $ref: '#/components/schemas/CreateAccount'
         '400':
           description: Invalid input or request body
       security:
         - token: []
-  /deleteblogg:
-    delete:
-      tags:
-        - Blog
-      summary: delete Comment Data berdasarkan nomor id
-      description: delete Comment data
-      operationId: delete Comment
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/blogdelete' # Gunakan skema yang sesuai di sini
-      responses:
-        '200':
-          description: successful operation
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/blogfix'
-        '400':
-          description: Invalid input or request body
-      security:
-        - token: []
-  /createcommentt:
+  /forgot-account-berkemah:
     post:
       tags:
-        - Comment
-      summary: Create Comment Data
-      description: Create Comment data
-      operationId: Create Comment
+        - User / Admin
+      summary: Lupa Password berdasarkan username
+      description: Lupa Password BY Username
+      operationId: Lupa Password BY Username
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/CretaeCOmment' # Gunakan skema yang sesuai di sini
+              $ref: '#/components/schemas/CreateAccount' # Gunakan skema yang sesuai di sini
       responses:
         '200':
           description: successful operation
@@ -321,157 +154,30 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/CretaeCOmment'
+                  $ref: '#/components/schemas/CreateAccount'
         '400':
           description: Invalid input or request body
-      security:
-        - token: []
-  /createblogg:
+  /decode-token-berkemah:
     post:
       tags:
-        - Blog
-      summary: Create Comment Data
-      description: Create Comment data
-      operationId: Create Comment
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/blogfix' # Gunakan skema yang sesuai di sini
+        - User / Admin
+      summary: Get Data all User
+      description: Get Data all User
+      operationId: getUser
       responses:
         '200':
           description: successful operation
           content:
             application/json:
               schema:
-                type: array
                 items:
-                  $ref: '#/components/schemas/blogfix'
+                  $ref: '#/components/schemas/CreateAccount'
         '400':
-          description: Invalid input or request body
+          description: Invalid response
       security:
-        - token: []
-  /upadateblog-1:
-    patch:
-      tags:
-        - Blog
-      summary: Update Comment Data berdasarkan nomor id
-      description: Update Comment data
-      operationId: Update Comment
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/blogfix' # Gunakan skema yang sesuai di sini
-      responses:
-        '200':
-          description: successful operation
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/blogfix'
-        '400':
-          description: Invalid input or request body
-      security:
-        - token: []
-  /updatecommentt:
-    patch:
-      tags:
-        - Comment
-      summary: Update Comment Data berdasarkan nomor id
-      description: Update Comment data
-      operationId: Update Comment
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/CretaeCOmment' # Gunakan skema yang sesuai di sini
-      responses:
-        '200':
-          description: successful operation
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/CretaeCOmment'
-        '400':
-          description: Invalid input or request body
-      security:
-        - token: []           
+        - token: []         
 components:
   schemas:
-    Peta:
-      type: object
-      properties:
-        type:
-          type: string
-        geometry:
-          type: object
-          properties:
-            type: 
-              type: string
-            coordinates: 
-              type: array
-        properties:
-          type: object
-          properties:
-            name:
-              type: string
-    CretaeCOmment:
-      type: object
-      properties:
-        ID:
-          type: int
-          example: 123
-        Username:
-          type: string
-          example: udin123
-        Comment:
-          type: string
-          example: kamu knp?
-        Answer:
-          type: string
-          example: aku gpp
-        Question:
-          type: string
-          example: aku laper
-        Tanggal:
-          type: string
-          example: "23-09-32"
-        Status:
-          type: bool
-          example: true
-    CreateProduct:
-      type: object
-      properties:
-        Nomorid:
-          type: int
-          example: 123
-        Name:
-          type: string
-          example: udin123
-        Description:
-          type: string
-          example: kamu knp?
-        Price:
-          type: int
-          example: 123
-        Size:
-          type: string
-          example: aku laper
-        Stock:
-          type: int
-          example: 123
-        Image:
-          type: string
-          example: aku laper
-        Status:
-          type: bool
-          example: true
     Auth:
       type: object
       properties:
@@ -490,476 +196,12 @@ components:
         password:
           type: string
           example: contoh
-        no_whatsapp:
+        name:
           type: string
-          example: 62881023806530
-    EventGlobal:
-      type: object
-      properties:
-        id:
-          type: int
-          example: 123
-        Title:
+          example: udin
+        role:
           type: string
-          example: udin123
-        Description:
-          type: string
-          example: kamu knp?
-        Tanggal:
-          type: string
-          example: aku laper
-        Image:
-          type: string
-          example: aku laper
-        Harga:
-          type: int
-          example: 123
-        Content:
-          type: array
-          items:
-            type: object
-            properties:
-              id:
-                type: int
-                example: 123
-              Content:
-                type: string
-                example: udin123
-              Image:
-                type: string
-                example: kamu knp?
-              Description:
-                type: string
-                example: aku laper
-              status:
-                type: bool
-                example: true
-        Product:
-          type: array
-          items:
-            type: object
-            properties:
-              Nomorid:
-                type: int
-                example: 123
-              Name:
-                type: string
-                example: udin123
-              Description:
-                type: string
-                example: kamu knp?
-              Price:
-                type: int
-                example: 123
-              Size:
-                type: string
-                example: aku laper
-              Stock:
-                type: int
-                example: 123
-              Image:
-                type: string
-                example: aku laper
-              status:
-                type: bool
-                example: true
-        Status:
-          type: bool
-          example: true
-      Title: string
-      Description: string
-      Tanggal: string
-      Image: string
-      Harga: number
-      Content:
-        - id: number
-          Content: string
-          Image: string
-          Description: string
-          status: boolean
-      Product:
-        - Nomorid: number
-          Name: string
-          Description: string
-          Price: number
-          Size: string
-          Stock: number
-          Image: string
-          status: boolean
-      Status: boolean
-    blogfix:
-      type: object
-      properties:
-        id:
-          type: int
-          example: 123
-        content_one:
-          type: string
-          example: udin123
-        Content_two:
-          type: string
-          example: kamu knp?
-        Image:
-          type: string
-          example: aku laper
-        Title:
-          type: string
-          example: aku laper
-        Title_two:
-          type: string
-          example: aku laper
-        Description:
-          type: string
-          example: aku laper
-        description_two:
-          type: string
-          example: aku laper
-        description_3:
-          type: string
-          example: aku laper
-        status:
-          type: bool
-          example: true
-      content_one: string
-      Content_two: string
-      Image: string
-      Title: string
-      Title_two: string
-      Description: string
-      description_two: string
-      description_3: string
-      status: boolean
-    blogdelete:
-      type: object
-      properties:
-        id:
-          type: int
-          example: 123
-    event:
-      type: object
-      properties:
-        id:
-          type: int
-          example: 123
-        Title:
-          type: string
-          example: udin123
-        Description:
-          type: string
-          example: kamu knp?
-        Tanggal:
-          type: string
-          example: aku laper
-        Image:
-          type: string
-          example: aku laper
-        Harga:
-          type: int
-          example: 123
-        LinkYoutube:
-          type: string
-          example: 123
-        Content:
-          type: array
-          items:
-            type: object
-            properties:
-              id:
-                type: int
-                example: 123
-              Content:
-                type: string
-                example: udin123
-              Image:
-                type: string
-                example: kamu knp?
-              Description:
-                type: string
-                example: aku laper
-              status:
-                type: bool
-                example: true
-        Product:
-          type: array
-          items:
-            type: object
-            properties:
-              Nomorid:
-                type: int
-                example: 123
-              Name:
-                type: string
-                example: udin123
-              Description:
-                type: string
-                example: kamu knp?
-              Price:
-                type: int
-                example: 123
-              Size:
-                type: string
-                example: aku laper
-              Stock:
-                type: int
-                example: 123
-              Image:
-                type: string
-                example: aku laper
-              status:
-                type: bool
-                example: true
-        Status:
-          type: bool
-          example: true
-      Title: string
-      Description: string
-      Tanggal: string
-      Image: string
-      Harga: number
-      Content:
-        - id: number
-          Content: string
-          Image: string
-          Description: string
-          status: boolean
-      Product:
-        - Nomorid: number
-          Name: string
-          Description: string
-          Price: number
-          Size: string
-          Stock: number
-          Image: string
-          status: boolean
-      Status: boolean     
-    about:
-      type: object
-      properties:
-        id:
-          type: int
-          example: 123
-        Title:
-          type: string
-          example: udin123
-        Description:
-          type: string
-          example: kamu knp?
-        Tanggal:
-          type: string
-          example: aku laper
-        Image:
-          type: string
-          example: aku laper
-        Harga:
-          type: int
-          example: 123
-        Content:
-          type: array
-          items:
-            type: object
-            properties:
-              id:
-                type: int
-                example: 123
-              Content:
-                type: string
-                example: udin123
-              Image:
-                type: string
-                example: kamu knp?
-              Description:
-                type: string
-                example: aku laper
-              status:
-                type: bool
-                example: true
-        Product:
-          type: array
-          items:
-            type: object
-            properties:
-              Nomorid:
-                type: int
-                example: 123
-              Name:
-                type: string
-                example: udin123
-              Description:
-                type: string
-                example: kamu knp?
-              Price:
-                type: int
-                example: 123
-              Size:
-                type: string
-                example: aku laper
-              Stock:
-                type: int
-                example: 123
-              Image:
-                type: string
-                example: aku laper
-              status:
-                type: bool
-                example: true
-        Status:
-          type: bool
-          example: true
-      Title: string
-      Description: string
-      Tanggal: string
-      Image: string
-      Harga: number
-      Content:
-        - id: number
-          Content: string
-          Image: string
-          Description: string
-          status: boolean
-      Product:
-        - Nomorid: number
-          Name: string
-          Description: string
-          Price: number
-          Size: string
-          Stock: number
-          Image: string
-          status: boolean
-      Status: boolean
-    AuthResponse:
-      type: object
-      properties:
-        status:
-          type: bool
-          example: false
-        message:
-          type: string
-          example: fehguy
-        token:
-          type: string
-          example: fehguy
-    CreateComment:
-      type: object
-      properties:
-        id:
-          type: int
-          example: 123
-        Username:
-          type: string
-          example: udin123
-        Comment:
-          type: string
-          example: kamu knp?
-        Answer:
-          type: string
-          example: aku gpp
-        Question:
-          type: string
-          example: aku laper
-        Tanggal:
-          type: string
-          example: "23-09-32"
-    product:
-      type: object
-      properties:
-        Nomorid:
-          type: int
-          example: 123
-        Name:
-          type: string
-          example: udin123
-        Description:
-          type: string
-          example: kamu knp?
-        Price:
-          type: int
-          example: 123
-        Size:
-          type: string
-          example: aku laper
-        Stock:
-          type: int
-          example: 123
-        Image:
-          type: string
-          example: aku laper
-        Status:
-          type: bool
-          example: true
-    DeleteProduct:
-      type: object
-      properties:
-        nomorid:
-          type: int
-          example: 123
-    DeleteContent:
-      type: object
-      properties:
-        id:
-          type: int
-          example: 123
-    DeleteComment:
-      type: object
-      properties:
-        id:
-          type: int
-          example: 123
-    DeleteEventGlobal:
-      type: object
-      properties:
-        ID:
-          type: int
-          example: 123
-    content:
-      type: object
-      properties:
-        id:
-          type: int
-          example: 123
-        Content:
-          type: string
-          example: udin123
-        Image:
-          type: string
-          example: kamu knp?
-        Descriptopn:
-          type: int
-          example: 123
-        Status:
-          type: bool
-          example: true
-    tokenuser:
-          type: object
-          properties:
-            status:
-              type: bool
-              example: true
-            Message:
-              type: string
-              example: Berhasil decode token
-            username:
-              type: string
-              example: testing123              
-    AuthReq:
-      description: Request Authentication
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Auth'
-    CreateEvent:
-      description: Request Authentication
-      eventglobal:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/EventGlobal'
-    UserArray:
-      description: List of user object
-      content:
-        application/json:
-          schema:
-            type: array
-            items:
-              $ref: '#/components/schemas/AuthResponse'
+          example: admin/user
   securitySchemes:
     token:
       type: apiKey
